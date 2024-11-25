@@ -14,7 +14,7 @@
 typedef struct type_spec
 {
 	char *spec;
-	void (*func)(va_list ap, int);
+	void (*func)(va_list ap);
 } type_spec;
 
 int _printf(const char *format, ...);
