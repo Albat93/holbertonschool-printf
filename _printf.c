@@ -27,8 +27,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == spec[j].spec[0])
 			{
-				_putchar(str[i]);
-				spec[j].print(ap);
+				spec[j].func(ap);
 			}
 			j++;
 		}
@@ -36,4 +35,5 @@ int _printf(const char *format, ...)
 	}
 	_putchar('\n');
 	va_end(ap);
+	return (0);
 }
