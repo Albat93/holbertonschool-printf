@@ -1,6 +1,9 @@
 #ifndef _create_printf_
 #define _create_printf_
 #include <stdarg.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct _printf - name of the structure for printf function
