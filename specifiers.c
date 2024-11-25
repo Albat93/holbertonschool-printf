@@ -13,12 +13,12 @@ int print_string(va_list ap)
 	int i = 0;
 	char *str = va_arg(ap, char *);
 	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i])
+		_putchar(str[i]);
 }
 
 int print_decimal(va_list ap)
 {
-	if (i < )
+
 }
 
 int print_int(va_list ap)
@@ -28,6 +28,7 @@ int print_int(va_list ap)
 
 int print_percent(va_list ap)
 {
+	int i;
 	if (i == 37)
-	_putchar(37);
+		_putchar(37);
 }
