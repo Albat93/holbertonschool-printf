@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int i = 0, j;
 	char *str;
 
-	print spec[] = {
+	type_spec spec[] = {
 		{"c", printf_char},
 		{"s", printf_string},
 		{"%", printf_percent},
