@@ -11,17 +11,17 @@
  * @spec: specifier string
  */
 
-typedef struct _printf
+typedef struct type_spec
 {
 	char *spec;
-	int (*print)(va_list ap, int);
-} print;
+	void (*func)(va_list ap, int);
+} type_spec;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_percent(va_list ap);
-int print_int(va_list ap);
-int print_decimal(va_list ap);
-int print_string(va_list ap);
-int print_char(va_list ap);
+void printf_percent(va_list ap);
+void printf_int(va_list ap);
+void printf_decimal(va_list ap);
+void printf_string(va_list ap);
+void printf_char(va_list ap);
 #endif
