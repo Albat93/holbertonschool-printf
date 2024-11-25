@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i = 0, j;
-	char *str;
 
 	type_spec spec[] = {
 		{"c", printf_char},
