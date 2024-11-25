@@ -11,7 +11,7 @@
 typedef struct _printf
 {
 	char *spec;
-	_printf (*f)(va_list ap);
+	int (*print)(va_list ap);
 } _printf;
 
 int _printf(const char *format, ...);
