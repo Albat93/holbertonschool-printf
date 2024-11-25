@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include "main.h"
+
 /**
  */
 int print_char(va_list ap)
