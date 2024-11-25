@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int i = 0, j;
 	char *str;
 
-	print spec[] = {
+	type_spec spec[] = {
 		{"c", printf_char},
 		{"s", printf_string},
 		{"%", printf_percent},
@@ -27,8 +27,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == spec[j].spec[0])
 			{
-				_putchar(str[i]);
-				spec[j].print(ap);
+				spec[j].func(ap);
 			}
 			j++;
 		}
@@ -36,4 +35,5 @@ int _printf(const char *format, ...)
 	}
 	_putchar('\n');
 	va_end(ap);
+	return (0);
 }
