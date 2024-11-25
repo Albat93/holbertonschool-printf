@@ -23,7 +23,7 @@ void printf_string(va_list ap)
 
 void printf_percent(va_list ap)
 {
-	char '%' = va_arg(ap, char);
-	if ('%' == 37)
+	int i = va_arg(ap, int);
+	if (i == 37)
 		_putchar(37);
 }
