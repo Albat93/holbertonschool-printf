@@ -25,6 +25,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '%')
+				_putchar(37);
 			j = 0;
 			while (spec[j].spec)
 			{
@@ -37,7 +39,7 @@ int _printf(const char *format, ...)
 				j++;
 			}
 		}
-		else
+			else
 		{
 			_putchar(format[i]);
 			count++;
