@@ -20,9 +20,9 @@ void printf_string(va_list ap)
 
 	while (str[i] != '\0')
 	{
+		_putchar(str[i]);
 		i++;
 	}
-	_putchar(i);
 }
 
 void printf_percent(va_list ap)
