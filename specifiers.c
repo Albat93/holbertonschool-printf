@@ -15,10 +15,14 @@ void printf_char(va_list ap)
  */
 void printf_string(va_list ap)
 {
-	int i;
 	char *str = va_arg(ap, char *);
-	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i]);
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	_putchar(i);
 }
 
 void printf_percent(va_list ap)
