@@ -24,10 +24,9 @@ void printf_string(va_list ap)
 		i++;
 	}
 }
-
 void printf_percent(va_list ap)
 {
-	int i = va_arg(ap, int);
-	if (i == 37)
+	char c = va_arg(ap, int);
+	if (c == '%')
 		_putchar(37);
 }
