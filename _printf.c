@@ -2,10 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
 /**
+ * _printf - copy of printf function
  *
+ * @format: Types of arguments passed to function
  *
+ * Return: the string to be printed with the parameter function that matches
  */
+
 int _printf(const char *format, ...)
 {
 	va_list ap;
