@@ -55,21 +55,23 @@ int printf_percent(va_list ap)
  */
 int printf_decimal(va_list ap)
 {
-	int number = va_arg(ap, int);
+	int num = va_arg(ap, int);
 	int buffer[12];
 	int count = 0, i = 0, j;
 
-	if (number < 0)
-	{
-		_putchar(45);
-		number = -number;
-		count++;
-	}
+	if (num <= INT_MAX && num >= INT_MIN)
 
-	while (number > 0)
+		if (num < 0)
+		{
+			_putchar(45);
+			num = -num;
+			count++;
+		}
+
+	while (num > 0)
 	{
-		buffer[i++] = number % 10;
-		number /= 10;
+		buffer[i++] = num % 10;
+		num /= 10;
 	}
 
 	if (i == 0)
