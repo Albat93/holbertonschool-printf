@@ -25,6 +25,8 @@ int printf_string(va_list ap)
 	char *str = va_arg(ap, char *);
 	int i = 0;
 
+	if (str == NULL)
+		return (0);
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
