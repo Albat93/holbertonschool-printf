@@ -37,7 +37,7 @@ int printf_decimal(va_list ap)
 {
 	int n = va_arg(ap, int);
 	int j = 0;
-	char buffer[10];
+	char buffer[11];
 
 	if (n < 0)
 	{
