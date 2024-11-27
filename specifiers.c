@@ -59,7 +59,7 @@ int printf_decimal(va_list ap)
 	int buffer[12];
 	int count = 0, i = 0, j;
 
-	if (num <= INT_MAX && num >= INT_MIN)
+	/**if (num <= INT_MAX && num >= INT_MIN)*/
 
 		if (num < 0)
 		{
