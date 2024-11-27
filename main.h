@@ -6,8 +6,8 @@
 #include <stdio.h>
 
 /**
- * struct _printf - name of the structure for printf function
- * @f: pointer of function
+ * struct type_spec - name of the structure for printf function
+ * @func: pointer of function
  * @spec: specifier string
  */
 
