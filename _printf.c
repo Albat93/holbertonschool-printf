@@ -67,6 +67,20 @@ int _printf(const char *format, ...)
 }
 
 /**
+#include "main.h"
+
+int main(void)
+{
+	int count;
+
+	count = _printf("Character: %c, String: %s, Decimal: %d\n", 'A', "Hello World!", 123);
+	_printf("Total printed characters: %d\n", count);
+
+
+
+	return 0;
+}
+
 int _printf(const char *format, ...)
 {
 	va_list ap;
