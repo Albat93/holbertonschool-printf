@@ -4,6 +4,9 @@
 #include "main.h"
 
 /**
+ * printf_char - print char c with _putchar
+ * @ap: argument parameters
+ * Return: 1 on success
  */
 int printf_char(va_list ap)
 {
@@ -13,6 +16,9 @@ int printf_char(va_list ap)
 }
 
 /**
+ * printf_string - prints a char string to stdout
+ * @ap: argument parameters
+ * Return: lenght of the string
  */
 int printf_string(va_list ap)
 {
@@ -25,14 +31,24 @@ int printf_string(va_list ap)
 	}
 	return (1);
 }
-
+/**
+ * printf_percent - print modulo sign
+ *
+ * @ap: argument parameter
+ * Return: number of characters printed
+ */
 int printf_percent(va_list ap)
 {
 	(void) ap;
 	_putchar ('%');
 	return (1);
 }
-
+/**
+ * printf_decimal - print decimal and integer
+ *
+ * @ap: argument parameter
+ * Return: int printed
+ */
 int printf_decimal(va_list ap)
 {
 	int n = va_arg(ap, int);
