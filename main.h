@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * struct type_spec - name of the structure for printf function
@@ -17,6 +18,7 @@ typedef struct type_spec
 	int (*func)(va_list ap);
 } type_spec;
 
+int compare_spec(char format_spec, va_list ap);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int printf_percent(va_list ap);
