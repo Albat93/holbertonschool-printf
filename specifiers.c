@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include "main.h"
+#include <limits.h>
 
 /**
  * printf_char - print char c with _putchar
