@@ -26,7 +26,10 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '%')
-				_putchar(37);
+			{
+				_putchar('%');
+				count++;
+			}
 			j = 0;
 			while (spec[j].spec)
 			{
