@@ -2,10 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
 /**
- *
- *
+ * _printf - our function printf
+ * @format: Types of arguments passed to function
+ * Return: matches specifier with the right function to print
  */
+
 int _printf(const char *format, ...)
 {
 	va_list ap;
