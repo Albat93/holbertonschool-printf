@@ -19,9 +19,6 @@ int compare_spec(char format_spec, va_list ap)
 		{"%", printf_percent},
 		{"d", printf_decimal},
 		{"i", printf_decimal},
-		{"u", printf_unsigned},
-		{"x", printf_hex_lower},
-		{"X", printf_hex_upper},
 		{NULL, NULL},
 	};
 	j = 0;
@@ -29,7 +26,7 @@ int compare_spec(char format_spec, va_list ap)
 	{
 		if (format_spec == spec[j].spec[0])
 		{
-			count = spec[j].func(ap)
+			count = spec[j].func(ap);
 			return (count);
 		}
 		j++;
