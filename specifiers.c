@@ -24,14 +24,15 @@ int printf_string(va_list ap)
 {
 	char *str = va_arg(ap, char *);
 	int i = 0;
+	int count = 0;
 
 	if (str == NULL)
 		return (0);
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(str[i]);
+		count += _putchar(str[i]);
 	}
-	return (1);
+	return (count);
 }
 /**
  * printf_percent - print modulo sign
