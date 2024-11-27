@@ -11,7 +11,7 @@
 int printf_char(va_list ap)
 {
 	char c = va_arg(ap, int);
-		_putchar(c);
+	_putchar(c);
 	return (1);
 }
 
@@ -41,8 +41,8 @@ int printf_string(va_list ap)
  */
 int printf_percent(va_list ap)
 {
-	(void) ap;
-	_putchar ('%');
+	(void)ap;
+	_putchar('%');
 	return (1);
 }
 /**
@@ -53,31 +53,33 @@ int printf_percent(va_list ap)
  */
 int printf_decimal(va_list ap)
 {
-	int n = va_arg(ap, int);
-	int j = 0;
-	char buffer[12];
+	int number = va_arg(ap, int);
+	int buffer[12];
+	int count = 0, i = 0, j;
 
-	if (n < 0)
+	if (number < 0)
 	{
-		_putchar('-');
-		n = -n;
-	}
-	if (n == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
-	while (n > 0)
-	{
-		buffer[j] = (n % 10) + '0';
-		j++;
-		n /= 10;
-	}
-	for (j = j - 1; j >= 0; j--)
-	{
-		_putchar(buffer[j]);
+		_putchar(45);
+		number = -number;
+		count++;
 	}
 
-	return (1);
+	while (number > 0)
+	{
+		buffer[i++] = number % 10;
+		number /= 10;
+	}
 
+	if (i == 0)
+	{
+		buffer[i++] = 0;
+	}
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar('0' + buffer[j]);
+		count++;
+	}
+
+	return (count);
 }
