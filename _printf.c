@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
 		{"c", printf_char},
 		{"s", printf_string},
 		{"%", printf_percent},
+		{"d", printf_decimal},
 		{NULL, NULL},
 	};
 	va_start(ap, format);
@@ -33,19 +34,22 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				count++;
 			}
-			j = 0;
-			while (spec[j].spec)
+			else
 			{
-				if (format[i] == spec[j].spec[0])
+				j = 0;
+				while (spec[j].spec)
 				{
-					spec[j].func(ap);
-					count++;
-					break;
+					if (format[i] == spec[j].spec[0])
+					{
+						spec[j].func(ap);
+						count++;
+						break;
+					}
+					j++;
 				}
-				j++;
 			}
 		}
-			else
+		else
 		{
 			_putchar(format[i]);
 			count++;
