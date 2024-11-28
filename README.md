@@ -36,3 +36,11 @@ _printf("String: %s\n", "School");
 _printf("Decimal: %d\n", 745);
 return(0);
 }
+
+```
+**Compilation**
+* `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
+
+## Authors
+* Alexis B.
+* Killian R.
