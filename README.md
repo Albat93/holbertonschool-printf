@@ -1,16 +1,17 @@
-# PRINTF PROJECT
-**_printf**
+**_printf project**
+---
 
 This is our custom version of printf function, it can print characters, string and numbers with these function calls.
 
-* %c : print a single character.
-* %s : print a string.
-* %% : print a percent.
-* %d : print decimal.
-* %i : print an integer.
+* `%c` : print a single character.
+* `%s` : print a string.
+* `%%` : print a percent.
+* `%d` : print decimal.
+* `%i` : print an integer.
 
 
 **Flowchart**
+---
 
 ```mermaid
 flowchart TD
@@ -24,3 +25,12 @@ E --> G(increment count)
 F --> H(increment count)
 
 ```
+
+```c
+#include "main.h"
+int main()
+{
+_printf("String: %s\n", "School");
+_printf("Decimal: %d\n", 745);
+return(0);
+}
