@@ -1,6 +1,6 @@
-**_printf project**
+# **_printf project**
+**_print**
 ---
-**_printf**
 This is our custom version of printf function, it can print characters, string and numbers with these function calls.
 
 * `%c` : print a single character.
