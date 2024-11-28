@@ -24,11 +24,11 @@ int printf_char(va_list ap)
 int printf_string(va_list ap)
 {
 	char *str = va_arg(ap, char *);
-	int i = 0;
-	int count = 0;
+	int i = 0, count = 0;
 
 	if (str == NULL)
 		return (0);
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		count += _putchar(str[i]);
@@ -59,14 +59,12 @@ int printf_decimal(va_list ap)
 	int buffer[12];
 	int count = 0, i = 0, j;
 
-	/**if (num <= INT_MAX && num >= INT_MIN)*/
-
-		if (num < 0)
-		{
-			_putchar(45);
-			num = -num;
-			count++;
-		}
+	if (num < 0)
+	{
+		_putchar('-');
+		num = -num;
+		count++;
+	}
 
 	while (num > 0)
 	{
