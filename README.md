@@ -1,6 +1,6 @@
 **_printf project**
 ---
-
+**_printf**
 This is our custom version of printf function, it can print characters, string and numbers with these function calls.
 
 * `%c` : print a single character.
@@ -25,6 +25,8 @@ E --> G(increment count)
 F --> H(increment count)
 
 ```
+**EXAMPLES**
+---
 
 ```c
 #include "main.h"
