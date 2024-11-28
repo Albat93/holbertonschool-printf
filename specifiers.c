@@ -74,13 +74,14 @@ int printf_decimal(va_list ap)
 
 	if (i == 0)
 	{
-		buffer[i++] = 0;
+		count += _putchar('0');
+		return (count);
 	}
 
 	for (j = i - 1; j >= 0; j--)
 	{
-		_putchar('0' + buffer[j]);
-		count++;
+		count += _putchar('0' + buffer[j]);
+
 	}
 	return (count);
 }
