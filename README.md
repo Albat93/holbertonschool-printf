@@ -1,4 +1,4 @@
-# **_printf project**
+# **PRINTF Project**
 **_print**
 ---
 This is our custom version of printf function, it can print characters, string and numbers with these function calls.
