@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, count = 0;
+	int i = 0, count = 0, r_spec = 0;
 
 	va_start(ap, format);
 
@@ -25,13 +25,14 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (!compare_spec(format[i + 1], ap))
+			r_spec += compare_spec(format[i + 1], ap);
+			if (r_spec == 0)
 			{
 				_putchar(format[i]);
 				_putchar(format[i + 1]);
 				count += 2;
 			}
-			count++;
+			count += r_spec;
 			i++;
 		}
 		else
