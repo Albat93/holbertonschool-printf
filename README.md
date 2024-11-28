@@ -1,5 +1,5 @@
-# holbertonschool-printf
-**_printf project**
+# PRINTF PROJECT
+**_printf**
 
 This is our custom version of printf function, it can print characters, string and numbers with these function calls.
 
