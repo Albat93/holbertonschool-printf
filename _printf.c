@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i = 0;
-	int count = 0, result_compare;
+	int count = 0;
 
 	va_start(ap, format);
 	if (*format == '\0')
@@ -33,15 +33,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				result_compare = compare_spec(format[i], ap);
-				if (result_compare == 0)
-				{
-					_putchar('%');
-					_putchar(format[i]);
-					count += 2;
-				}
-				else
-					count += result_compare;
+				count += compare_spec(format[i], ap);
 			}
 		}
 		else
