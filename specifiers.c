@@ -65,6 +65,11 @@ int printf_decimal(va_list ap)
 		num = -num;
 		count++;
 	}
+	if (i == 0)
+	{
+		_putchar(0);
+		count++;
+	}
 
 	while (num > 0)
 	{
@@ -72,10 +77,6 @@ int printf_decimal(va_list ap)
 		num /= 10;
 	}
 
-	if (i == 0)
-	{
-		buffer[i++] = 0;
-	}
 
 	for (j = i - 1; j >= 0; j--)
 	{
