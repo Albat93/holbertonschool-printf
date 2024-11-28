@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	if (!format)
+	if (*format == '\0')
 	{
 		va_end(ap);
 		return (-1);
