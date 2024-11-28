@@ -1,0 +1,46 @@
+.TH _printf "November 29, 2024" "_printf manual" "_printf function documentation"
+.SH NAME
+_printf - Print formatted output to standard output.
+.SH SYNOPSIS
+.B #include "main.h"
+.TP
+.BI int _printf(const char *format, ...);
+.SH DESCRIPTION
+.B _printf
+The functions of
+.B _printf
+generate output according to a specified format, which may include different types of specifiers.
+.TP
+If no specifier is used, it simply prints a normal string.
+.TP
+On the other hand, a
+.B format
+string is a string that contains
+.B format
+specifiers, indicated by the % symbol, and ends with another specifier.
+.TP
+.BI %c
+print a single character.
+.TP
+.BI %s
+print a string of character. (this function print a sequence of character terminated by a null byte '\0')
+.TP
+.BI %i
+print an integer.
+.TP
+.BI %d
+print decimal integer.
+/*advanced task*/
+.SH RETURN VALUE
+Returns the total number of characters displayed without the null ('\0').
+.SH EXAMPLES
+.B _printf("String: %s\n", "School");
+.TP
+.B print : School
+.TP
+.B return : 6
+.SH AUTHORS
+.TP
+.BI Alexis B.
+.TP
+.BI Killian R.
