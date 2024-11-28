@@ -31,6 +31,5 @@ int compare_spec(char format_spec, va_list ap)
 		}
 		j++;
 	}
-
 	return (0);
 }

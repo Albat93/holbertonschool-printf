@@ -82,6 +82,5 @@ int printf_decimal(va_list ap)
 		_putchar('0' + buffer[j]);
 		count++;
 	}
-
 	return (count);
 }
