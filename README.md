@@ -1,6 +1,6 @@
 # **PRINTF Project**
-![Language](https://img.shields.io/badge/Language-C-green?labelColor=grey&style=flat)
-**_print**
+![Language](https://img.shields.io/badge/Language-C-green?labelColor=grey&style=flat)  
+**_printf**
 ---
 This is our custom version of printf function, it can print characters, string and numbers with these function calls.
 
