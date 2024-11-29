@@ -7,17 +7,12 @@ _printf - Print formatted output to standard output.
 .BI int _printf(const char *format, ...);
 .SH DESCRIPTION
 .B _printf
-The functions of
-.B _printf
-generate output according to a specified format, which may include different types of specifiers.
-.TP
+The functions of generate output according to a specified format, which may include different types of specifiers.(see exemples below)
+
 If no specifier is used, it simply prints a normal string.
-.TP
-On the other hand, a
-.B format
-string is a string that contains
-.B format
-specifiers, indicated by the % symbol, and ends with another specifier.
+
+Otherwise, the "format" string is a string that contains format
+specifiers, indicated by the % symbol, and ends with different specifier.
 .TP
 .BI %c
 print a single character.
@@ -30,7 +25,7 @@ print an integer.
 .TP
 .BI %d
 print decimal integer.
-/*advanced task*/
+
 .SH RETURN VALUE
 Returns the total number of characters displayed without the null ('\0').
 .SH EXAMPLES
@@ -41,6 +36,6 @@ Returns the total number of characters displayed without the null ('\0').
 .B return : 6
 .SH AUTHORS
 .TP
-.BI Alexis B.
+.I Alexis BATTISTONI
 .TP
-.BI Killian R.
+.I Killian RIPOCHE
