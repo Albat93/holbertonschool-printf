@@ -68,7 +68,7 @@ int printf_decimal(va_list ap)
 
 	while (num > 0)
 	{
-		buffer[i++] = num % 10;
+		buffer[i++] = (num % 10) + '0';
 		num /= 10;
 	}
 
@@ -80,7 +80,7 @@ int printf_decimal(va_list ap)
 
 	for (j = i - 1; j >= 0; j--)
 	{
-		count += _putchar('0' + buffer[j]);
+		count += _putchar(buffer[j]);
 
 	}
 	return (count);
