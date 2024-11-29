@@ -55,32 +55,33 @@ int printf_percent(va_list ap)
  */
 int printf_decimal(va_list ap)
 {
-	int num = va_arg(ap, int);
+	int n = va_arg(ap, int), count = 0, i = 0;
 	int buffer[12];
-	int count = 0, i = 0, j;
+	unsigned int num;
 
-	if (num < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		num = -num;
+		num = -n;
 		count++;
 	}
+	else
+		num = n;
 
+	if (num == 0)
+	{
+		count += _putchar('0');
+		return (count);
+	}
 	while (num > 0)
 	{
 		buffer[i++] = (num % 10) + '0';
 		num /= 10;
 	}
 
-	if (i == 0)
+	for (i = i - 1; i >= 0; i--)
 	{
-		count += _putchar('0');
-		return (count);
-	}
-
-	for (j = i - 1; j >= 0; j--)
-	{
-		count += _putchar(buffer[j]);
+		count += _putchar(buffer[i]);
 
 	}
 	return (count);
