@@ -12,7 +12,7 @@
 int printf_char(va_list ap)
 {
 	char c = va_arg(ap, int);
-		_putchar(c);
+	_putchar(c);
 	return (1);
 }
 
@@ -82,7 +82,18 @@ int printf_decimal(va_list ap)
 	for (i = i - 1; i >= 0; i--)
 	{
 		count += _putchar(buffer[i]);
-
 	}
 	return (count);
+}
+/**
+ * _printf_unknown - deal with unknown specifier
+ *
+ * @format_spec: specifier to check
+ * Return: the char to be printed
+ */
+int _printf_unknown(char format_spec)
+{
+	_putchar('%');
+	_putchar(format_spec);
+	return (2);
 }
