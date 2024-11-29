@@ -59,33 +59,29 @@ int printf_decimal(va_list ap)
 	int buffer[12];
 	int count = 0, i = 0, j;
 
-	if (num < INT_MAX && num > INT_MIN)
+	if (num < 0)
 	{
-		if (num < 0)
-		{
-			_putchar('-');
-			num = -num;
-			count++;
-		}
+		_putchar('-');
+		num = -num;
+		count++;
+	}
 
-		while (num > 0)
-		{
-			buffer[i++] = num % 10;
-			num /= 10;
-		}
+	while (num > 0)
+	{
+		buffer[i++] = num % 10;
+		num /= 10;
+	}
 
-		if (i == 0)
-		{
-			count += _putchar('0');
-			return (count);
-		}
-
-		for (j = i - 1; j >= 0; j--)
-		{
-			count += _putchar('0' + buffer[j]);
-		}
+	if (i == 0)
+	{
+		count += _putchar('0');
 		return (count);
 	}
-	else
-		return (-1);
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		count += _putchar('0' + buffer[j]);
+
+	}
+	return (count);
 }
