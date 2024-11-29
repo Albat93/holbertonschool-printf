@@ -26,4 +26,5 @@ int printf_int(va_list ap);
 int printf_decimal(va_list ap);
 int printf_string(va_list ap);
 int printf_char(va_list ap);
+int _printf_unknown(char format_spec);
 #endif
